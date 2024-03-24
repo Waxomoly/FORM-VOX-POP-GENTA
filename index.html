@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo_genta.png" type="img/login/x-icon">
+    <title>VoxPop</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <br><br>
+    <section id="overlay">
+        <div id="overlay-text">
+            <p>Terima Kasih Telah Mengisi VOX POP!</p>
+            <a type="button" class="btn btn-light" href="https://msha.ke/gentaukp#top-picks">Kembali ke Daftar Form</a>
+            <a type="button" class="btn" href="https://genta.petra.ac.id/" id="toGentaButton">To GENTA</a>
+        </div>
+    </section>
+    <div class="container-fluid">
+        <div class="container">
+            <img src="images/voxpop_banner.png" alt="" id="banner">
+                <section class="form-section form-desc">
+                    <p>
+                        Majalah GENTA merupakan majalah karya Pers Mahasiswa Petra Christian University. Mengusung tema besar "Unheard Voices", Persma akan menerbitkan majalah dengan 5 subtema yaitu :<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp193 - Diskriminasi<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp194 - Disabilitas<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp195 - Suara Anak Muda<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp196 - Lingkungan<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp197 - Kesenjangan<br> 
+                        Jika Sobat memiliki pendapat dan pemikiran kritis terhadap subtema-subtema di atas, Persma terbuka untuk mendengarkan suara Sobat.<br> 
+                    </p>
+                    <strong>GENTAKAN SUARAMU !</strong>
+                </section>
+
+
+                <form action="#" class="form-section form-main">
+                    <div class="form-group">
+                        <label for="emailAddress">Email</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <input type="text" class="form-control" id="nama" placeholder="Enter here..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="unit">Jurusan/Unit</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <select id="unit" class="form-control" required>
+                            <option value="">Choose...</option>
+                            <!--list of majors and units will be added by javascript here-->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kontak">Id line atau nomor Whatsapp</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <input type="text" class="form-control" id="kontak" placeholder="Enter here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="opini1">Suara Sobat tentang "Disabilitas"</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <textarea class="form-control" id="opini1" rows="3" placeholder="Enter here..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="opini2">Suara Sobat tentang "Suara Anak Muda"</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <textarea class="form-control" id="opini2" rows="3" placeholder="Enter here..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="opini3">Suara Sobat tentang "Lingkungan"</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <textarea class="form-control" id="opini3" rows="3" placeholder="Enter here..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="opini4">Suara Sobat tentang "Kesenjangan"</label>
+                        <span class="required-question" aria-label="Required question">*</span>
+                        <textarea class="form-control" id="opini4" rows="3" placeholder="Enter here..." required></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary submit" value="Submit" data-target="#submissionModal">Submit</button>
+                    
+                    
+                   
+                </form>
+
+                <!-- Modal -->
+                <div class="modal fade" id="submissionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Submission</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Apakah anda sudah yakin untuk mengirim jawaban?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                            <button type="button" class="btn btn-primary" id="confirmSubmit">Iya</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+    <script>
+        /**
+         * To create dropdown options
+         * 
+         * */
+        var unitList = [
+            "Dosen UK Petra", "Staff/Karyawan UK Petra", "Arsitektur", "Bahasa Mandarin", 
+            "Business Accounting", "Business Management", "Creative Tourism", "Data Science and Analytics (DSA)", 
+            "Desain Fashion Dan Tekstil (DFT)", "Desain Interior", "Desain Komunikasi Visual (DKV)", "Doktor Teknik Sipil", 
+            "English for Business", "English for Creative Industry", "Finance and Investment", "Hotel Management", 
+            "Ilmu Komunikasi", "Informatika", "International Business Accounting (IBACC)", "International Business Engineering (IBE)", 
+            "International Business Management", "International Program In Digital Media (IPDM)", "Internet Of Things", "Magister Arsitektur", 
+            "Magister Manajemen", "Magister Sastra", "Magister Teknik Industri", "Magister Teknik Sipil", 
+            "Marketing Management", "Otomotif", "Pendidikan Anak Usia Dini (PG-PAUD)", "Pendidikan Guru Sekolah Dasar (PG-SD)", 
+            "Pendidikan Profesi Insinyur", "Sistem Informasi Bisnis", "Sustainable Mechanical Engineering \u0026 Design Program", 
+            "Tax Accounting", "Teknik Elektro", "Teknik Industri", "Teknik Sipil"
+        ]
+
+        for(var i = 0; i < unitList.length; i++){
+            var unitItem = document.createElement('option');
+            var unitChoice = unitList[i];
+            unitItem.value = unitChoice.toUpperCase(); //made up value, ganti sesuai kebutuhan
+            unitItem.innerHTML = unitChoice;
+            document.getElementById('unit').appendChild(unitItem);
+        }
+
+        /**
+         * For form submission modal pop-up
+         * 
+         * */
+        $(document).ready(function () {
+            $("form").submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+                console.log('');
+                if(
+                    $("#emailAddress").val() !== "" && $("#nama").val() !== "" && $("#unit").val() !== "" &&
+                    $("#kontak").val() !== "" && $("#opini1").val() !== "" && $("#opini2").val() !== "" &&
+                    $("#opini3").val() !== "" && $("#opini4").val() !== "" 
+                ){
+                $("#submissionModal").modal("show");
+                }else{
+                    $("#submissionModal").modal("hide"); //just in case
+                }
+            });
+
+
+            /**
+             * For final submission button (in modal)
+             * 
+             * */
+            $("#confirmSubmit").click(function () {
+                    $("#submissionModal").modal("hide");
+                    $("#emailAddress, #nama, #unit, #kontak, #opini1, #opini2, #opini3, #opini4").val("");
+                    document.getElementById('overlay').style.display = 'block';
+                    document.getElementsByTagName("body")[0].style.overflowY = 'hidden';
+            });
+
+        
+        });
+
+
+    </script>
+
+</body>
+</html>
